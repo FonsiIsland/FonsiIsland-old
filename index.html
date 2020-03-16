@@ -4,25 +4,28 @@
     <meta charset="utf-8">
     <title></title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" charset="utf-8"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
   </head>
   <body>
-    <div class = "middle">
-      <a class="btn" href="#">
-        <i class="fab fa-facebook-f"></i>
-      </a>
-      <a class="btn" href="#">
-        <i class="fab fa-twitter"></i>
-      </a>
-      <a class="btn" href="#">
-        <i class="fab fa-google"></i>
-      </a>
-      <a class="btn" href="#">
-        <i class="fab fa-instagram"></i>
-      </a>
-      <a class="btn" href="#">
-        <i class="fab fa-youtube"></i>
-      </a>
-      </div>
+    <header>
+      <div class="inner-width">
+        <a href="#" class="logo"><img src="logo.png" alt=""></a>
+        <i class="menu-toggle-btn fas fa-bars"></i>
+        <nav class="navigation-menu">
+          <a href="#"><i class="fas fa-home home"></i> Start</a>
+          <a href="#"><i class="fas fa-align-left about"></i> Über uns</a>
+          <a href="#"><i class="fab fa-buffer ranks"></i> Ränge</a>
+          <a href="#"><i class="fas fa-users team"></i> Unser Team</a>
+        </nav>
+    </header>
+
+
+    <script type="text/javascript">
+    $(".menu-toggle-btn").click(function () {
+      $(this).toggleClass("fa-times");
+      $(".navigation-menu").toggleClass("active");
+    });
+    </script>
   </body>
-</htmtl>>
+</htmtl>
