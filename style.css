@@ -3,22 +3,40 @@
   padding: 0;
   text-decoration: none;
   font-family: "Open Sans",sans-serif;
+
 }
 
+.section{
+  width: 100%;
+  height: 200vh;
+  color: #fff;
+  background: linear-gradient(-45deg, #EE7752, #E73C7E, #23A6D5, #23D5AB);
+  background-size: 400% 500%;
+  background-repeat: no-repeat;
+  position: relative;
+  animation: change 10s infinite;
+}
+
+
 header{
-  height: 190px;
+  height: 150px;
+  background: #2f3640;
+}
+
+footer{
+  height: 150px;
   background: #2f3640;
 }
 
 .inner-width{
   max-width: 2000px;
-  padding: 20px 20px 0;
+  padding: 5.5px 20px 0;
   margin: auto;
 }
 
 .logo{
   float: left;
-  padding: 20px 20px 0;
+  padding: 23px 20px 0;
 
 
 }
@@ -40,7 +58,7 @@ header{
   color: #ddd;
   text-transform: uppercase;
   font-size: 20px;
-  padding: 30px 10px;
+  padding: 30px 15px;
   border-radius: 4px;
   transition: .3s linear;
 }
@@ -72,50 +90,30 @@ header{
   color: #5f27cd;
 }
 
-.menu-toggle-btn{
-  float: right;
-  height: 90px;
-  line-height: 90px !important;
-  color: #fff;
-  font-size: 26px;
-  display: none !important;
-  cursor: pointer;
+
+@keyframes change {
+
+  0%{
+    background-position: 0 50%;
+  }
+  50%{
+    background-position: 100% 50%;
+  }
+  100%{
+    background-position: 0 50%;
+  }
+
 }
 
-
-@media screen and (max-width:800px) {
-  .menu-toggle-btn{
-    display: block !important;
-  }
-
-  .navigation-menu{
-    position: fixed;
-    width: 100%;
-    max-width: 400px;
-    background: #2f3640;
-    top: 90px;
-    right: 0;
-    display: none;
-    padding: 20px 40px;
-    box-sizing: border-box;
-  }
-
-  .navigation-menu::before{
-    content: "";
-    border-left: 10px solid transparent;
-    border-right: 10px solid transparent;
-    border-bottom: 10px solid #172b4d;
-    position: absolute;
-    top: -10px;
-    right: 10px;
-  }
-
-  .navigation-menu a{
-    display: block;
-    margin: 10px 0;
-  }
-
-  .navigation-menu.active{
-    display: block;
-  }
+::-webkit-scrollbar{
+  background: #2f3640;
+  width: 14px;
+}
+::-webkit-scrollbar-track{
+  box-shadow: inset 0 0 10px #00000070;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb{
+  background: linear-gradient(125deg,#3498db,#34495e);
+  border-radius: 10px;
 }
